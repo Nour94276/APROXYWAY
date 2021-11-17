@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyTrip.Views.MenuPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" Padding="10" BackgroundColor="Gray">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Button Clicked="Button_Clicked" Text="Home" BackgroundColor="#35E566"></Button>
+                    <Button Clicked="Button_Clicked_1" Text="Déonnexion" BackgroundColor="#35E566"></Button>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

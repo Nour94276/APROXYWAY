@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyTrip.Views.Inscription">
+
+    <StackLayout>
+        <StackLayout Orientation="Vertical" >
+            <StackLayout Orientation="Horizontal" Margin="20,50,20,0">
+                <ImageButton Margin="20,0,20,0"
+        Source="path.png" Clicked="ImageButton_Clicked_1"
+                BackgroundColor="Transparent"/>
+                <Image 
+                Source="logopages.png"/>
+            </StackLayout>
+           
+
+            <Label Text="Nom" FontSize="Micro" MaxLines="1" Margin="40,60,40,-10"></Label>
+            <Entry x:Name="NOM" FontSize="Micro" Margin="40,0,40,-5"></Entry>
+            <Label Text="Prénom"  FontSize="Micro" Margin="40,0,40,-5"></Label>
+            <Entry  x:Name="PRENOM" FontSize="Micro" Margin="40,0,40,-5"></Entry>
+            <Label Text="Adresse Mail" FontSize="Micro" Margin="40,0,40,-5"></Label>
+            <Entry  x:Name="EMAIL" Keyboard="Email"  FontSize="Micro" Margin="40,0,40,-5"></Entry>
+            <Label x:Name="ERORMAIL" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+            <Label Text="Mot de passe"  FontSize="Micro" Margin="40,0,40,-5"></Label>
+            <Entry  x:Name="MDP" IsPassword="true" FontSize="Micro" Margin="40,0,40,-5"></Entry>
+            <Label x:Name="ERORALL"   Text="Tous les Champs sont obligatoire*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+
+            <Button x:Name="inscription" BackgroundColor="#35E566" Text="Inscription" Margin="40"  TextColor="White" CornerRadius="10"  Clicked="Button_Clicked" ></Button>
+           
+
+
+        </StackLayout>
+        <Grid VerticalOptions="EndAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           
+        </Grid>
+    </StackLayout>
+</ContentPage>

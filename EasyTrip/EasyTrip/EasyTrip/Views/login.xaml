@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyTrip.Views.login">
+
+        <StackLayout>
+        <StackLayout Orientation="Vertical" >
+            <Image Source="logo.png" ></Image>
+            <Label Text="Adresse Mail" FontSize="Micro" Margin="40,0,40,-5"></Label>
+            <Entry  x:Name="EMAIL" FontSize="Micro" Margin="40,0,40,-5"></Entry>
+            <Label x:Name="ERORMAIL" Text="Champs obligatoire*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+            <Label  Text="Mot de passe"  FontSize="Micro" Margin="40,0,40,-5"></Label>
+            <Entry x:Name="MDP" FontSize="Micro" IsPassword="true"  Margin="40,0,40,-5"></Entry>
+            <Label x:Name="ERORMdp" Text="Champs obligatoire*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+            <Label x:Name="ERORMdpOrMail" Text="Le mail ou le mot de passe est incorrect*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Margin="0,30,0,0">
+            <Button x:Name="Connexion" BackgroundColor="#35E566" Text="Connexion"  TextColor="White" CornerRadius="10"   Clicked="Connexion_Clicked_1" WidthRequest="120" HeightRequest="40" ></Button>
+            <Button x:Name="Inscription" BackgroundColor="#35E566" Text="Inscription"  TextColor="White" CornerRadius="10" Clicked="Inscription_Clicked" WidthRequest="120" HeightRequest="40"></Button>
+        </StackLayout>
+        <Label VerticalOptions="EndAndExpand" Text="En vous inscrivant vous acceptez nos Politiques de confidentialité*" Margin="20,40,20,40" FontSize="10" HorizontalOptions="CenterAndExpand"  ></Label>
+    
+            </StackLayout>
+           
+      
+  
+</ContentPage>

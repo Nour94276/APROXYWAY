@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="EasyTrip.Views.detailplacetovisit">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical" >
+                <StackLayout Orientation="Horizontal" Margin="20">
+                    <ImageButton Margin="10,0,20,0"
+                   Source="path.png" Clicked="ImageButton_Clicked"
+                BackgroundColor="Transparent"/>
+                    <Image Source="logopages.png"/>
+                </StackLayout>
+            </StackLayout>
+
+
+
+            <telerikPrimitives:RadSlideView SlidingToIndex="slideView_SlidingToIndex" HeightRequest="500"  x:Name="slideView" ItemsSource="{Binding place_To_Visit}"
+                                            
+                                SelectedIndicatorColor="Red">
+                <telerikPrimitives:RadSlideView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <StackLayout>
+                                <Frame Margin="10"
+                                       BorderColor="Black" Grid.Column="0" Grid.Row="0"
+                                        CornerRadius="10"
+                                        IsClippedToBounds="True"
+                                         HorizontalOptions="Fill"
+                                          VerticalOptions="Center">
+                                    <Image x:Name="City"
+                                                       Source="{Binding img}"
+                                                       Aspect="AspectFill"
+                                                       Margin="-20"
+                                                       HeightRequest="190"
+                                                       WidthRequest="200" />
+                                </Frame>
+                                <Frame Grid.Column="0" Grid.Row="1" Margin="20"
+                              
+                              CornerRadius="10"
+                              HasShadow="True"
+                            IsClippedToBounds="True"
+       HorizontalOptions="Center"
+       VerticalOptions="Center">
+                                    <Label x:Name="Description" Padding="10" Text="{Binding Description}"
+         Margin="-20" />
+                                </Frame>
+                            </StackLayout>
+                           
+                        </ContentView>
+                    </DataTemplate>
+                </telerikPrimitives:RadSlideView.ItemTemplate>
+            </telerikPrimitives:RadSlideView>
+
+
+
+           
+          
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
