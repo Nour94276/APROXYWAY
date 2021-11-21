@@ -18,7 +18,7 @@ namespace EasyTrip.Models
         {
             string libraryPath = "";
             if (Device.RuntimePlatform == Device.Android)
-                libraryPath = "/storage/emulated/0/Download";
+                libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             else if (Device.RuntimePlatform == Device.iOS)
             {
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
