@@ -64,7 +64,7 @@ namespace EasyTrip.Views
 
 
             List<PLACE_TO_VISIT> pLACE_TOs_COMO = new List<PLACE_TO_VISIT>();
-            pLACE_TOs_COMO.Add(new PLACE_TO_VISIT { ID_PLace_To_Visit = 13, City = "Como", Description = "", nom_Place_To_Visit = "Lungolago Viale Geno", img = "lun.jpg" });
+            pLACE_TOs_COMO.Add(new PLACE_TO_VISIT { ID_PLace_To_Visit = 13, City = "Como", Description = "Le centre-ville est situé au bord du lac, autour de la Piazza del Duomo , l'un des monuments les plus populaires du nord de l'Italie . Le noyau historique a encore l'apparence du castrum romain d' origine , avec des murs médiévaux bien conservés et de grandes tours de guet.", nom_Place_To_Visit = "Lungolago Viale Geno", img = "lun.jpg" });
             pLACE_TOs_COMO.Add(new PLACE_TO_VISIT { ID_PLace_To_Visit = 14, City = "Como", Description = "Offrant une vue sur le lac de Côme et les montagnes environnantes, ce funiculaire mène à des sentiers de randonnée en altitude.", GPS = "45.47172587658506, 9.179726242872341", nom_Place_To_Visit = "Téléphérique  Funiculaire Côme-Brunate", img = "telepherique.jpg" });
             pLACE_TOs_COMO.Add(new PLACE_TO_VISIT { ID_PLace_To_Visit = 15, City = "Como", Description = "Découvrez le restaurant sur le lac de Côme et le meilleur moyen en bateau pour déjeuner ou dîner pour une expérience inoubliable.", GPS = "45.85950113163592, 9.09710808641278", nom_Place_To_Visit = "Boat Restaurant", img = "restocomo.jpg" });
 
@@ -85,7 +85,12 @@ namespace EasyTrip.Views
                 }
                
             }
-            listViewPlaceTovisit.ItemsSource = m_s; 
+            if(m_s.Count >0)
+            {
+                listViewPlaceTovisit.ItemsSource = m_s;
+                Exist.IsVisible = true; 
+            }
+           else { Comming.IsVisible = true;  }; 
 
         }
 
@@ -116,6 +121,20 @@ namespace EasyTrip.Views
 
 
         }
-      
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushModalAsync(new discoverpage());
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new login();
+        }
+        private void RadButton_Clicked(object sender, EventArgs e)
+        {
+            drawer.IsOpen = !drawer.IsOpen;
+
+        }
+
     }
 }

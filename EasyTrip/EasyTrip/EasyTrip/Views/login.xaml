@@ -4,6 +4,7 @@
              x:Class="EasyTrip.Views.login">
 
         <StackLayout>
+        
         <StackLayout Orientation="Vertical" >
             <Image Source="logo.png" ></Image>
             <Label Text="Adresse Mail" FontSize="Micro" Margin="40,0,40,-5"></Label>

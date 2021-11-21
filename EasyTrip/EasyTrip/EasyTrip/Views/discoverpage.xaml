@@ -1,38 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-           
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:EasyTrip.Views" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" xmlns:input="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="EasyTrip.Views.discoverpage">
 
+         
     <ScrollView Orientation="Vertical" >
-        <StackLayout Orientation="Vertical" >
 
-            <StackLayout Orientation="Horizontal" Margin="0,15,0,15">
-                <ImageButton Margin="10,0,10,0" Source="path.png" BackgroundColor="Transparent" />
-                <Image Source="logopages.png" />
-            </StackLayout>
-            <SearchBar TextChanged="SearchBar_TextChanged" Margin="-10,0,20,10"></SearchBar>
-            <ListView x:Name="listViewtown" ItemTapped="listViewtown_ItemTapped" HasUnevenRows="True" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Grid BackgroundColor="AliceBlue">
-                                    <Grid.RowDefinitions>
+        
+        <telerikPrimitives:RadSideDrawer  x:Name="drawer" DrawerLength="200"  DrawerTransitionType="SlideInOnTop">
+                <telerikPrimitives:RadSideDrawer.MainContent>
+                <StackLayout Orientation="Vertical" >
+                    <StackLayout Orientation="Horizontal" Margin="0,15,0,15">
+                        <input:RadButton 
+                                    Margin="20,0,20,0"
+                                 VerticalOptions="Center"
+                                  WidthRequest="25"
+                               HeightRequest="20"
+                               BorderWidth="0"
+                               CornerRadius="0"
+                               BorderColor="Color.Transparent"
+                               Clicked="RadButton_Clicked"
+                               BackgroundColor="Color.Transparent"
+                               BackgroundImage="list.png"/>
+                        
+                        <Image Source="logopages.png" />
+                    </StackLayout>
+                    <SearchBar TextChanged="SearchBar_TextChanged" Margin="-10,0,20,10"></SearchBar>
+                    <ListView x:Name="listViewtown" ItemTapped="listViewtown_ItemTapped" HasUnevenRows="True" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Grid BackgroundColor="AliceBlue">
+                                            <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="300"></RowDefinition>
+                                                <RowDefinition Height="300"></RowDefinition>
 
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.Row="0" Grid.Column="0" Source="{Binding town_img}" Aspect="AspectFill" VerticalOptions="FillAndExpand" WidthRequest="200" ></Image>
-                                    <Label Margin="10" Grid.Row="0" TextColor="White" Grid.Column="0" Text="{Binding town_nom}"  Font="18" HorizontalOptions="StartAndExpand" VerticalOptions="Start"></Label>
-                                </Grid>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding town_img}" Aspect="AspectFill" VerticalOptions="FillAndExpand" WidthRequest="200" ></Image>
+                                            <Label Margin="10" Grid.Row="0" TextColor="White" Grid.Column="0" Text="{Binding town_nom}"  Font="18" HorizontalOptions="StartAndExpand" VerticalOptions="Start"></Label>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </telerikPrimitives:RadSideDrawer.MainContent>
+            <telerikPrimitives:RadSideDrawer.DrawerContent  HorizontalOptions="Center">
+                    <StackLayout Margin="0,60,0,0" >
+                    <Button Text="Acceuil" Clicked="Button_Clicked_2" TextColor="White"  BackgroundColor="#35E566" CornerRadius="5" />
+                    <Button Text="Déconnexion" Clicked="Button_Clicked_3" TextColor="White" BackgroundColor="#35E566" CornerRadius="5"  />
+                </StackLayout>
+                </telerikPrimitives:RadSideDrawer.DrawerContent>
+            </telerikPrimitives:RadSideDrawer>
+
+       
     </ScrollView>
 </ContentPage>

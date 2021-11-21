@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Telerik.XamarinForms.Primitives;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +17,7 @@ namespace EasyTrip.Views
         public discoverpage()
         {
             InitializeComponent();
+            drawer.IsOpen = false;
 
             NavigationPage.SetHasNavigationBar(this, false);
             listViewtown.SelectedItem = null ; 
@@ -51,6 +52,22 @@ namespace EasyTrip.Views
                 listViewtown.ItemsSource = _town.Where(x => x.town_nom.StartsWith(e.NewTextValue));
             }
 
+        }
+
+        private void RadButton_Clicked(object sender, EventArgs e)
+        {
+            drawer.IsOpen = !drawer.IsOpen;
+
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            this.Navigation.PushModalAsync(new discoverpage());
+        }
+
+        private void Button_Clicked_3(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new login();
         }
     }
 }

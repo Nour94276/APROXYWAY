@@ -36,7 +36,7 @@ namespace EasyTrip.Views
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
            
-            this.Navigation.PushAsync(new placetovisit(a , b));
+            this.Navigation.PushAsync(new NavigationPage(new placetovisit(a , b)));
 
         }
        

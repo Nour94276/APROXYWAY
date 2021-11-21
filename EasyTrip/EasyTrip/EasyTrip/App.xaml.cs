@@ -12,7 +12,7 @@ namespace EasyTrip
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new login());
+            MainPage = new NavigationPage(new login());
             InitDb();
         }
 

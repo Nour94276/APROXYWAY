@@ -1,0 +1,7 @@
+﻿<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@color/green"/>
+	<!--  Place your bitmap in the center  -->
+	<item>
+		<bitmap android:gravity="center" android:src="@mipmap/screensplash"/>
+	</item>
+</layer-list>

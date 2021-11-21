@@ -2,72 +2,101 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" xmlns:input="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="EasyTrip.Views.placetovisit">
     <ContentPage.Content>
 
 
-            <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
+            <telerikPrimitives:RadSideDrawer  x:Name="drawer" DrawerLength="200"  DrawerTransitionType="SlideInOnTop">
+                <telerikPrimitives:RadSideDrawer.MainContent>
+                    <StackLayout Orientation="Vertical" >
+                        <StackLayout Orientation="Horizontal" Margin="0,15,0,15">
+                            <input:RadButton 
+                                    Margin="20,0,20,0"
+                                 VerticalOptions="Center"
+                                  WidthRequest="25"
+                               HeightRequest="20"
+                               BorderWidth="0"
+                               CornerRadius="0"
+                               BorderColor="Color.Transparent"
+                               Clicked="RadButton_Clicked"
+                               BackgroundColor="Color.Transparent"
+                               BackgroundImage="list.png"/>
 
-                <StackLayout Orientation="Horizontal" Margin="0,15,0,15">
-                    <ImageButton Margin="10,0,10,0" Clicked="ImageButton_Clicked" Source="path.png" BackgroundColor="Transparent" />
-                    <Image Source="logopages.png" />
-                </StackLayout>
-                <SearchBar TextChanged="SearchBar_TextChanged" Margin="-20,0,20,0" ></SearchBar>
-                <Grid Margin="0,20,0,20">
-                    <Grid.RowDefinitions>
+                            <Image Source="logopages.png" />
+                        </StackLayout>
+                        <StackLayout IsVisible="false" x:Name="Comming" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="Commingsoon.PNG"></Image>
+                        </StackLayout>
+                        
+                        
+                        <StackLayout IsVisible="false" x:Name="Exist">
+                            <SearchBar TextChanged="SearchBar_TextChanged" Margin="-20,0,20,0" ></SearchBar>
+                            <Grid Margin="0,20,0,20">
+                                <Grid.RowDefinitions>
 
-                        <RowDefinition Height="160"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                                    <RowDefinition Height="160"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                    <Frame  Grid.Column="0" Grid.Row="0" CornerRadius="10" Margin="10"
+                                <Frame  Grid.Column="0" Grid.Row="0" CornerRadius="10" Margin="10"
                            IsClippedToBounds="True"  HorizontalOptions="Fill"  VerticalOptions="Center">
-                        <Image x:Name="img_town" Source="" Aspect="AspectFill" Margin="-20" />
-                    </Frame>
-                </Grid>
+                                    <Image x:Name="img_town" Source="" Aspect="AspectFill" Margin="-20" />
+                                </Frame>
+                            </Grid>
 
-                <StackLayout  Orientation="Horizontal" Margin="0,-80,10,20" HorizontalOptions="EndAndExpand">
-                    <Image  Source="check.png"></Image>
-                    <Label x:Name="Town_name" TextColor="DarkOliveGreen" FontSize="Body"  FontAttributes="Bold, Italic" Text=""
+                            <StackLayout  Orientation="Horizontal" Margin="0,-80,10,20" HorizontalOptions="EndAndExpand">
+                                <Image  Source="check.png"></Image>
+                                <Label x:Name="Town_name" TextColor="DarkOliveGreen" FontSize="Body"  FontAttributes="Bold, Italic" Text=""
                ></Label>
-                </StackLayout>
+                            </StackLayout>
 
-            <telerikDataControls:RadListView Margin="5, 10,5,5" BackgroundColor="Transparent" x:Name="listViewPlaceTovisit" ItemTapped="listViewPlaceTovisit_ItemTapped">
-                    <telerikDataControls:RadListView.ItemTemplate>
-                        <DataTemplate>
-                            <telerikListView:ListViewTemplateCell>
-                                <telerikListView:ListViewTemplateCell.View>
-                                <StackLayout Padding="5" BackgroundColor="Transparent">
+                            <telerikDataControls:RadListView Margin="5, 10,5,5" BackgroundColor="Transparent" x:Name="listViewPlaceTovisit" ItemTapped="listViewPlaceTovisit_ItemTapped">
+                                <telerikDataControls:RadListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <telerikListView:ListViewTemplateCell>
+                                            <telerikListView:ListViewTemplateCell.View>
+                                                <StackLayout Padding="5" BackgroundColor="Transparent">
 
-                                    <Frame   CornerRadius="10" HeightRequest="240"
+                                                    <Frame   CornerRadius="10" HeightRequest="240"
                               WidthRequest="160"
                            IsClippedToBounds="True" HorizontalOptions="StartAndExpand"
                                VerticalOptions="Center">
-                                        <Image Source="{Binding img}"
+                                                        <Image Source="{Binding img}"
                                                         Aspect="AspectFill"
                                                                    Margin="-20"
                                                                    HeightRequest="100"
                                                                    WidthRequest="100" />
-                                    </Frame>
-                                    <StackLayout
+                                                    </Frame>
+                                                    <StackLayout
             Orientation="Horizontal" Margin="0,-60,0,0" HorizontalOptions="Center">
-                                        <Image Source="check.png"></Image>
-                                        <Label TextColor="White"  FontAttributes="Bold, Italic" Text="{Binding City}"
+                                                        <Image Source="check.png"></Image>
+                                                        <Label TextColor="White"  FontAttributes="Bold, Italic" Text="{Binding City}"
                ></Label>
-                                    </StackLayout>
-                                </StackLayout>
-                            </telerikListView:ListViewTemplateCell.View>
-                            </telerikListView:ListViewTemplateCell>
-                        </DataTemplate>
-                    </telerikDataControls:RadListView.ItemTemplate>
-                    <telerikDataControls:RadListView.LayoutDefinition>
-                        <telerikListView:ListViewLinearLayout  Orientation="Horizontal" />
-                    </telerikDataControls:RadListView.LayoutDefinition>
-                </telerikDataControls:RadListView>
-            </StackLayout>
-   
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </telerikListView:ListViewTemplateCell.View>
+                                        </telerikListView:ListViewTemplateCell>
+                                    </DataTemplate>
+                                </telerikDataControls:RadListView.ItemTemplate>
+                                <telerikDataControls:RadListView.LayoutDefinition>
+                                    <telerikListView:ListViewLinearLayout  Orientation="Horizontal" />
+                                </telerikDataControls:RadListView.LayoutDefinition>
+                            </telerikDataControls:RadListView>
+                        </StackLayout>
+                    </StackLayout>
+                </telerikPrimitives:RadSideDrawer.MainContent>
+                <telerikPrimitives:RadSideDrawer.DrawerContent  HorizontalOptions="Center">
+                    <StackLayout Margin="0,60,0,0" >
+                        <Button Text="Acceuil" Clicked="Button_Clicked" TextColor="White"  BackgroundColor="#35E566" CornerRadius="5" />
+                        <Button Text="Déconnexion" Clicked="Button_Clicked_1" TextColor="White" BackgroundColor="#35E566" CornerRadius="5"  />
+                    </StackLayout>
+                </telerikPrimitives:RadSideDrawer.DrawerContent>
+            </telerikPrimitives:RadSideDrawer>
+                
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

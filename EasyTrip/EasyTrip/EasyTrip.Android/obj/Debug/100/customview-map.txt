@@ -22,6 +22,7 @@ AutoCompleteTextView;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\
 background;obj\Debug\100\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\100\res\mipmap-anydpi-v26\icon_round.xml
 bitmap;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\11\jl\res\drawable\hamburger.xml
+bitmap;obj\Debug\100\res\drawable\background_splash.xml
 Button;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\10\jl\res\layout-v11\on_demand_manual.xml
 cache-path;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\57\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\layout\data_form_checkbox_editor.xml
@@ -105,12 +106,15 @@ item;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android
 item;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable-v21\autocomplete_bg_normal.xml
 item;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable-v21\autocomplete_focusable_bg.xml
 item;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\values\values.xml
+item;obj\Debug\100\res\drawable\background_splash.xml
+item;obj\Debug\100\res\values\styles.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\11\jl\res\drawable\hamburger.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable\autocomplete_default_background.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable\autocomplete_focusable_bg.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable\events_popup_bg.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable-v21\autocomplete_bg_active.xml
 layer-list;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\9\jl\res\drawable-v21\autocomplete_bg_normal.xml
+layer-list;obj\Debug\100\res\drawable\background_splash.xml
 LinearLayout;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\10\jl\res\layout\simple_group_header_item.xml
 LinearLayout;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\11\jl\res\layout\default_tooltip_content.xml
 LinearLayout;C:\Users\N7512037\source\repos\APROXYWAY\EasyTrip\EasyTrip\EasyTrip.Android\obj\Debug\100\lp\11\jl\res\layout\navigation_drawer_content.xml

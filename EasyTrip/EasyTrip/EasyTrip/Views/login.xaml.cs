@@ -20,6 +20,17 @@ namespace EasyTrip.Views
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            //try
+            //{
+            //    this.IsBusy = true;
+            //     DisplayAlert("Alert", "You have been alerted", "OK");
+            //}
+
+            //finally
+            //{
+            //    this.IsBusy = false;
+            //}
+
         }
 
  
@@ -47,8 +58,9 @@ namespace EasyTrip.Views
                         prenom = item.User_prenom;
                         id = item.ID_User;
                     }
-                   
-                    this.Navigation.PushModalAsync(new discoverpage());
+
+                    Application.Current.MainPage = new discoverpage();
+
                 }
                 else { ERORMdpOrMail.IsVisible = true; }
             }
@@ -60,5 +72,6 @@ namespace EasyTrip.Views
             this.Navigation.PushModalAsync( new Inscription());
 
         }
+
     }
 }
