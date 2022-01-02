@@ -11,7 +11,7 @@
  <img src="Demo/7.png" width="200" height="400" />
  <img src="Demo/8.png" width="200" height="400" />
  </span>
-  <h2> Places to visit and Details about places to visit </h2>
+  <h2> Details about places to visit </h2>
   <span>
  <img src="Demo/9.png" width="200" height="400" />
  <img src="Demo/10.png" width="200" height="400" />
